@@ -18,7 +18,8 @@ export abstract class AbstractEncoder implements Encoder {
      *
      * @param codePoint - The code point which could not be encoded.
      */
-    protected fail(codePoint: number): never {
-        throw TypeError(`The code point ${codePoint} could not be encoded`);
+    protected fail(codePoint: number): number {
+        // throw TypeError(`The code point ${codePoint} could not be encoded`);
+        return 0x00;
     }
 }
